@@ -3,37 +3,27 @@
 	"name": "cuba",
 	"patterns": [
 		{ "include": "#keywords"	},
-		{ "include": "#types" 		},
-		{ "include": "#bodyfuns"	},
-		{ "include": "#ent" 			},
-		{ "include": "#options"  	},
-		{ "include": "#fname"     }
+    { "include": "#declared"	},
+		{ "include": "#callfn"	  },
+		{ "include": "#number"	  }
 	],
 	"repository": {
 		"keywords": {
-      "match": "\\b(doctype|tom|call|ifeq|enif|end|begin)\\b",
+      "match": "\\b(tom|iew|rat|duab|non|ba|lina|lete|poka|fo|krah|iiow|edie|umo|req|de|late|dav|xat|festo|tubl|botch|op|convo|end|rnd|nin|cast|pruvo|olud|self)\\b",
       "name": "keyword"
     },
-    "options": {
-      "match": "\\b(type|argc|cast|arg|name|val)\\b",
-      "name": "markup.italic"
-    },
-    "types": {
-      "match": "iew",
-      "name": "markup.raw"
-    },
-    "bodyfuns": {
-      "match": "\\b(int|str|flt|push|pop|ret|pop)\\b",
-      "name": "entity.name.tag"
-    },
-    "ent": {
-      "match": "lst",
-      "name": "string"
-    },
-    "fname": {
-      "match": "\\b(tom)\\b\\s*\\b[a-zA-Z][a-zA-Z_0-9]*\\b",
+    "declared": {
+      "match": "print",
       "name": "support.function"
+    },
+    "callfn": {
+      "match": "([a-zA-Z_][a-zA-Z_0-9]*)\\(",
+      "name": "entity.name.function"
+    },
+    "number": {
+      "match": "\\b([0-9][\\.0-9]*)\\b",
+      "name": "constant.numeric"
     }
 	},
-	"scopeName": "source.cbo"
+	"scopeName": "source.cb"
 }

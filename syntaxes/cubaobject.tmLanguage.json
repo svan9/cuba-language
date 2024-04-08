@@ -1,0 +1,44 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "cubaobject",
+	"patterns": [
+		{ "include": "#keywords"	},
+		{ "include": "#types" 		},
+		{ "include": "#bodyfuns"	},
+		{ "include": "#ent" 			},
+		{ "include": "#options"  	},
+		{ "include": "#fname"     },
+		{ "include": "#number"    }
+	],
+	"repository": {
+		"keywords": {
+      "match": "\\b(doctype|tom|call|ifeq|enif|end|begin)\\b",
+      "name": "keyword"
+    },
+    "options": {
+      "match": "\\b(type|argc|cast|arg|name|val)\\b",
+      "name": "markup.italic"
+    },
+    "types": {
+      "match": "iew",
+      "name": "keyword.operator"
+    },
+    "bodyfuns": {
+      "match": "\\b(int|str|flt|push|pop|ret|pop)\\b",
+      "name": "entity.name.tag"
+    },
+    "ent": {
+      "match": "lst",
+      "name": "string"
+    },
+    "fname": {
+      "match": "\\b(tom)\\b\\s*\\b[a-zA-Z][a-zA-Z_0-9]*\\b",
+      "name": "support.function"
+    },
+    "number": {
+      "match": "\\b([0-9][\\.0-9]*)\\b",
+      "name": "constant.numeric"
+    }
+	},
+	"scopeName": "source.cbo"
+}

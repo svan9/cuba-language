@@ -2,7 +2,9 @@
   "name": "cuba-language",
   "displayName": "cuba-language",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "publisher": "sosou",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.88.0"
   },
@@ -14,18 +16,39 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [
+    "languages": [ 
       {
         "id": "cubaobject",
         "aliases": ["cubaobject"],
         "extensions": [".cbo"],
+        "icon": {
+          "dark": "images/cubaobject.png",
+          "light": "images/cubaobject.png"
+        },
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "cuba",
+        "aliases": ["cuba"],
+        "extensions": [".cb"],
+        "icon": {
+          "dark": "images/cuba.png",
+          "light": "images/cuba.png"
+        },
         "configuration": "./language-configuration.json"
       }
     ],
-    "grammars": [{
-      "language": "cubaobject",
-      "scopeName": "source.cbo",
-      "path": "./syntaxes/cuba.tmLanguage.json"
-    }]
+    "grammars": [
+      {
+        "language": "cubaobject",
+        "scopeName": "source.cbo",
+        "path": "./syntaxes/cubaobject.tmLanguage.json"
+      },
+      {
+        "language": "cuba",
+        "scopeName": "source.cb",
+        "path": "./syntaxes/cuba.tmLanguage.json"
+      }
+    ]
   }
 }
