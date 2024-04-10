@@ -24,7 +24,7 @@
       "name": "keyword.operator"
     },
     "bodyfuns": {
-      "match": "\\b(int|str|flt|push|pop|ret|pop)\\b",
+      "match": "\\b(lmv|var|mov|del|int|str|flt|push|pop|ret|pop)\\b",
       "name": "entity.name.tag"
     },
     "ent": {
