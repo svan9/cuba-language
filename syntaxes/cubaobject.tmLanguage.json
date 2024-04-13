@@ -8,36 +8,41 @@
 		{ "include": "#ent" 			},
 		{ "include": "#options"  	},
 		{ "include": "#fname"     },
-		{ "include": "#number"    }
+		{ "include": "#number"    },
+		{ "include": "#string"    }
 	],
 	"repository": {
 		"keywords": {
-      "match": "\\b(doctype|tom|call|ifeq|enif|end|begin)\\b",
-      "name": "keyword"
+      "match": "\\b(doctype|entry|tom|ifeq|enif|end|begin)\\b",
+      "name": "keyword.control"
     },
     "options": {
       "match": "\\b(type|argc|cast|arg|name|val)\\b",
       "name": "markup.italic"
     },
     "types": {
-      "match": "iew",
+      "match": "iew|lina",
       "name": "keyword.operator"
     },
     "bodyfuns": {
-      "match": "\\b(lmv|var|mov|del|int|str|flt|push|pop|ret|pop)\\b",
+      "match": "\\b(lmv|var|mov|del|int|str|flt|push|pop|ret|call)\\b",
       "name": "entity.name.tag"
     },
     "ent": {
       "match": "lst",
-      "name": "string"
+      "name": "string.xml"
     },
     "fname": {
-      "match": "\\b(tom)\\b\\s*\\b[a-zA-Z][a-zA-Z_0-9]*\\b",
+      "match": "\\b(tom)\\b \\b[a-zA-Z][a-zA-Z_0-9]*\\b",
       "name": "support.function"
     },
     "number": {
       "match": "\\b([0-9][\\.0-9]*)\\b",
       "name": "constant.numeric"
+    },
+    "string": {
+      "match": "\".*\"",
+      "name": "string"
     }
 	},
 	"scopeName": "source.cbo"
